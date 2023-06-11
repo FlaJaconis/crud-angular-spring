@@ -8,9 +8,14 @@ import { Curso } from '../model/curso';
 })
 export class CursosComponent implements OnInit {
 
-  cursos: Curso[] = []; //poderia ser inicializada assim
+  //poderia ser inicializada direto na variável...
+  cursos: Curso[] = [
+    {_id: '1', nome:'Angular', categoria : 'front-end'}
+  ];
+  displayedColumns = ['nome', 'categoria'];
+
   constructor(){
-    //this.cursos = []; ou poderia ser inicializada assim
+    //this.cursos = []; ...ou poderia ser inicializada assim
   }
 
   ngOnInit(): void {
