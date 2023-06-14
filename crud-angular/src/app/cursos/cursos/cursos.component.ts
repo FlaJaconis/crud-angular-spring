@@ -1,6 +1,7 @@
 import { CursosService } from './../../courses/services/cursos.service';
 import { Component, OnInit } from '@angular/core';
 import { Curso } from '../model/curso';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,9 +12,7 @@ import { Curso } from '../model/curso';
 export class CursosComponent implements OnInit {
 
   //poderia ser inicializada direto na variável...
-  cursos: Curso[] = [
-    {_id: '1', nome:'Angular', categoria : 'front-end'}
-  ];
+  cursos: Observable<Curso[]>; //observable indica que será um evento assíncrono
   displayedColumns = ['nome', 'categoria'];
 
   constructor(private cursoService: CursosService){
