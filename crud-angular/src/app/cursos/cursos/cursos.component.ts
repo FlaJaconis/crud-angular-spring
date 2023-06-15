@@ -12,13 +12,13 @@ import { Observable } from 'rxjs';
 export class CursosComponent implements OnInit {
 
   //poderia ser inicializada direto na variável...
-  cursos: Observable<Curso[]>; //observable indica que será um evento assíncrono
+  cursos$: Observable<Curso[]>; //observable indica que será um evento assíncrono - o símbolo $ na variável é convenção para identificar que é um observable
   displayedColumns = ['nome', 'categoria'];
 
   constructor(private cursoService: CursosService){
     //this.cursos = []; ...ou poderia ser inicializada assim
 
-    this.cursos = this.cursoService.lista();
+    this.cursos$ = this.cursoService.lista();
   }
 
   ngOnInit(): void {
