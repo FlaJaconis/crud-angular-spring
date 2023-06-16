@@ -1,7 +1,8 @@
+import { tap, first, delay } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Curso } from 'src/app/cursos/model/curso';
-import {HttpClient} from '@angular/common/http';
-import {tap, first, delay} from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
