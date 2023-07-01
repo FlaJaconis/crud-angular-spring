@@ -15,6 +15,7 @@ export class CursosService {
 
   lista(){
 
+
     //se colocar o generecs reconhecerá como um observable
     //o método pipe só foi colocado para que se verificasse o resultado sem o uso do debug
     return this.httpClient.get<Curso[]>(this.API).pipe(
