@@ -20,7 +20,7 @@ export class CursosService {
     //o método pipe só foi colocado para que se verificasse o resultado sem o uso do debug
     return this.httpClient.get<Curso[]>(this.API).pipe(
       first(), //diz para o servidor que estamos interessados só na primeira resposta e encerra
-      delay(15000),
+      //delay(15000),
       tap(cursos => console.log(cursos)) //só pra testar se a função está sendo executada
     );
   }
